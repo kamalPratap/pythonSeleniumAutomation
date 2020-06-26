@@ -5,6 +5,7 @@ config = ConfigParser()
 config['setting'] = {
     'debug': 'true',
     'secret_key': '121212',
+    'default_browser': 'Firefox',
     'log_path': 'C:/Users/kamal/Desktop/locales'
 }
 

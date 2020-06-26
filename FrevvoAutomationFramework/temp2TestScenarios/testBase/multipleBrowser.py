@@ -1,6 +1,6 @@
 import unittest
-import datetime
 from time import sleep
+import datetime
 from selenium import webdriver
 from configparser import ConfigParser
 from webdriver_manager.chrome import ChromeDriverManager
@@ -10,7 +10,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager, IEDriverManag
 
 class Browser(unittest.TestCase):
     def setUp(self):
-        print("Run Start at:- " + str(datetime.datetime.now()))
+        print("Run Start at:- "+str(datetime.datetime.now()))
         configParser = ConfigParser()
         configParser.read('../../config/configuration_file.ini')
         default_brower = configParser.get('setting', 'default_browser')
@@ -31,8 +31,7 @@ class Browser(unittest.TestCase):
         self.driver.maximize_window()
         sleep(5)
 
-        configParser.read(
-            '../../config/configuration_file.ini')  # Reading data from test.ini file from Utility directory
+        configParser.read('../../config/configuration_file.ini')  # Reading data from test.ini file from Utility directory
         print(configParser.get('files', 'url_path'))
         self.driver.get(configParser.get('files', 'url_path'))
 
